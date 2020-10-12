@@ -43,7 +43,7 @@ public class MathService {
 
 	public ArrayList<Integer> getPrimesBetween(int start, int end) {
 		ArrayList<Integer> primes = new ArrayList<>();
-		if (start < 0 || end < 0) {
+		if (start < 0 || end <=1) {
 			System.out.println("ERROR! Invalid input");
 			return primes;
 		}
@@ -60,7 +60,7 @@ public class MathService {
 					break;
 				}
 			}
-			if (!flag && start != 0 && start != 1) {
+			if (!flag) {
 				primes.add(start);
 			}
 
