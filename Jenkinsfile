@@ -30,7 +30,7 @@
         success {
             echo "This will be executed only when all stages succeed"
             junit '**/*xml'
-            jacoco execPattern: '**/target/jacoco.exec', sourceExclusionPattern: '**/Main.java'
+            jacoco execPattern: '**/target/**.exec'
             archiveArtifacts artifacts: "target/${JAR_FILENAME}-${JAR_VERSION}.jar", followSymlinks: false
             deleteDir()
         }
